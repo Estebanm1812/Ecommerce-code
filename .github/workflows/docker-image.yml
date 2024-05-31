@@ -3,7 +3,7 @@ name: db-Pipeline
 on:
   push:
    paths:
-     db-sql/**
+     - db-sql/**
 
 jobs:
   build:
