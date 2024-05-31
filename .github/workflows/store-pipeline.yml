@@ -1,4 +1,4 @@
-name: Store-Pipeline
+name: admin-Pipeline
 
 on:
   push:
