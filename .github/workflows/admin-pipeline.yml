@@ -1,4 +1,4 @@
-name: admin-Pipeline
+name: Build and Push Admin Image        
 
 on:
   push:
@@ -16,8 +16,11 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Log in to Azure Container Registry
-      run: |
-        docker login $ {{ secrets.CONTAINER_REGISTRY }} -u {{ secrets.USERNAME }}  --password {{ secrets.PASSWORD }} 
+      uses: azure/docker-login@v1
+      with:
+        login-server: containerRegistryUnique.azurecr.io
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
 
     - name: Build and push Docker image
       run: |
