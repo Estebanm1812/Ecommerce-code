@@ -3,7 +3,7 @@ name: admin-Pipeline
 on:
   push:
    paths:
-     -ecommerce-admin-main/**
+     - ecommerce-admin-main/**
 
 jobs:
   build:
