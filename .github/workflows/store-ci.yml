@@ -3,7 +3,7 @@ name: Store-Pipeline
 on:
   push:
    paths:
-     -ecommerce-store-main/**
+     - ecommerce-store-main/**
 
 jobs:
   build:
